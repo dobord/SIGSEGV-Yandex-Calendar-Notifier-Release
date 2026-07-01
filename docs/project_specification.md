@@ -30,8 +30,9 @@ the user's Windows Calendar, and show toast notifications before meetings.
 
 ## Packaging
 
-The Qt configuration app can be distributed through MSI/ZIP. The Windows Calendar writer must be MSIX-packaged because
-`AppointmentStore` requires package identity and the `appointmentsSystem` capability.
+The Qt configuration app and Windows Calendar writer are distributed together in one MSIX package. The Windows Calendar
+writer must be MSIX-packaged because `AppointmentStore` requires package identity and the `appointmentsSystem`
+capability.
 
 The project no longer installs a machine-wide background process and no longer writes shared operational state to a
 machine-wide data directory.

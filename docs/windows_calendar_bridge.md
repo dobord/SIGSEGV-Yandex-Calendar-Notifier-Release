@@ -31,8 +31,8 @@ Desktop WinRT APIs that require package identity are supported for packaged desk
 
 - https://learn.microsoft.com/en-us/windows/apps/desktop/modernize/winrt-api-desktop-app-support
 
-For that reason, the MSI/ZIP app is not the Windows Calendar writer. The MSIX-packaged `ycn_calendar_bridge.exe` owns
-Calendar publication and toast notification delivery.
+For that reason, Windows Calendar publication and toast notification delivery are owned by the MSIX-packaged
+`ycn_calendar_bridge.exe`.
 
 ## CLI Contract
 
@@ -54,7 +54,9 @@ ycn_calendar_bridge.exe --verify
 - `--verify` checks the expected events by Windows Calendar `RoamingId`.
 - `--probe` verifies package identity and performs a temporary AppointmentStore write/read/delete probe.
 
-The configuration app refuses lifecycle operations when the MSIX bridge alias reports a different version than the GUI. This protects MSI upgrades from accidentally starting an older packaged bridge that remained installed from a previous release.
+The configuration app refuses lifecycle operations when the MSIX bridge alias reports a different version than the GUI.
+This protects upgrades from accidentally starting an older packaged bridge that remained installed from a previous
+release.
 
 ## AppointmentStore Implementation
 
@@ -125,8 +127,8 @@ Install the package:
 
 ```powershell
 .\scripts\install-msix-bridge.ps1 `
-  -PackagePath artifacts\packages\SIGSEGVYandexCalendarBridge-0.6.7.0-x64.msix `
-  -CertificatePath artifacts\packages\SIGSEGVYandexCalendarBridge-0.6.7.0-x64.cer `
+  -PackagePath artifacts\packages\SIGSEGVYandexCalendarNotifier-0.6.8.0-x64.msix `
+  -CertificatePath artifacts\packages\SIGSEGVYandexCalendarNotifier-0.6.8.0-x64.cer `
   -TrustCertificateLocalMachine `
   -LaunchProbe
 ```

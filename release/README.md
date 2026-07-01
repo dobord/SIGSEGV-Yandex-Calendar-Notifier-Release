@@ -1,15 +1,13 @@
-﻿# v0.6.7
+# v0.6.8
 
-Version: 0.6.7
+Version: 0.6.8
 
-Mirrored from [dobord/SIGSEGV-Yandex-Calendar-Notifier](https://github.com/dobord/SIGSEGV-Yandex-Calendar-Notifier) commit `4cd138dc68541ecab60154158af64115b06b6018`.
+Mirrored from [dobord/SIGSEGV-Yandex-Calendar-Notifier](https://github.com/dobord/SIGSEGV-Yandex-Calendar-Notifier) commit `e8a0576a298ba3169772af131a2729b5b583a9fc`.
 
 ## Files
 
-- [SIGSEGVYandexCalendarBridge-0.6.7.0-x64.cer](./SIGSEGVYandexCalendarBridge-0.6.7.0-x64.cer)
-- [SIGSEGVYandexCalendarBridge-0.6.7.0-x64.msix](./SIGSEGVYandexCalendarBridge-0.6.7.0-x64.msix)
-- [SIGSEGVYandexCalendarNotifier-0.6.7-Windows-AMD64.msi](./SIGSEGVYandexCalendarNotifier-0.6.7-Windows-AMD64.msi)
-- [SIGSEGVYandexCalendarNotifier-0.6.7-Windows-AMD64.zip](./SIGSEGVYandexCalendarNotifier-0.6.7-Windows-AMD64.zip)
+- [SIGSEGVYandexCalendarNotifier-0.6.8.0-x64.cer](./SIGSEGVYandexCalendarNotifier-0.6.8.0-x64.cer)
+- [SIGSEGVYandexCalendarNotifier-0.6.8.0-x64.msix](./SIGSEGVYandexCalendarNotifier-0.6.8.0-x64.msix)
 
 ## Documentation
 
