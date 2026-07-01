@@ -4,26 +4,6 @@ This public repository is updated automatically from
 [`dobord/SIGSEGV-Yandex-Calendar-Notifier`](https://github.com/dobord/SIGSEGV-Yandex-Calendar-Notifier).
 It contains user-facing documentation and the latest published Windows release package set.
 
-## Download
-
-Open the `release` folder. It contains the current release files:
-
-- `SIGSEGVYandexCalendarNotifier-<version>-Windows-AMD64.msi`
-- `SIGSEGVYandexCalendarNotifier-<version>-Windows-AMD64.zip`
-- `SIGSEGVYandexCalendarBridge-<version>.0-x64.msix`
-- `SIGSEGVYandexCalendarBridge-<version>.0-x64.cer`
-
-Install the MSI or ZIP for the Qt configuration app, then install the matching MSIX bridge. The MSIX bridge is required
-for Windows Calendar publication because Windows grants calendar access only to packaged apps with the
-`appointmentsSystem` capability.
-
-## Documentation
-
-- [User manual](docs/user_manual.md)
-- [Windows Calendar bridge notes](docs/windows_calendar_bridge.md)
-- [Project specification](docs/project_specification.md)
-- [Changelog](CHANGELOG.md)
-
 ## Description
 
 SIGSEGV Yandex Calendar Notifier is a Windows 10/11 application that synchronizes selected Yandex calendars through
@@ -69,6 +49,13 @@ ycn_calendar_bridge.exe --probe
 
 If App Installer reports `0x800B0109` or `0x800B010A`, Windows does not trust the signing chain yet. Re-import the
 matching `.cer` into `Cert:\LocalMachine\Root` from an elevated PowerShell session, then retry the MSIX installation.
+
+## Documentation
+
+- [User manual](docs/user_manual.md)
+- [Windows Calendar bridge notes](docs/windows_calendar_bridge.md)
+- [Project specification](docs/project_specification.md)
+- [Changelog](CHANGELOG.md)
 
 ## Publishing Model
 
