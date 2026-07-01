@@ -4,8 +4,7 @@ SIGSEGV Yandex Calendar Notifier keeps selected Yandex Calendar events close to 
 app synchronizes selected CalDAV calendars, publishes upcoming events into the signed-in user's Windows Calendar, and
 shows Windows toast reminders for the current Windows user.
 
-The screenshots below are documentation-safe copies: email addresses, URLs, calendar names, and event titles are
-blurred.
+The screenshots below are documentation-safe copies: email addresses, URLs, and calendar names are blurred.
 
 ## Installation
 
@@ -33,7 +32,7 @@ Add-AppxPackage -Path .\SIGSEGVYandexCalendarNotifier-<version>.0-x64.msix
 
 Open `SIGSEGV Yandex Calendar Notifier` and fill in the **Account** section.
 
-![Account settings](assets/user-guide/account.png)
+![Account settings](assets/user-guide/en/account.png)
 
 Enter the Yandex CalDAV base URL, the Yandex account email, and the Yandex app password. The app password is stored
 locally through Windows DPAPI and is tied to the current Windows user.
@@ -48,6 +47,8 @@ Account actions:
 
 Use **Calendars** to choose the CalDAV collections that should be synchronized.
 
+![Calendar selection](assets/user-guide/en/calendars.png)
+
 Click **Discover calendars** to fetch the collection list from Yandex. Keep enabled only the calendars whose events
 should be published into Windows Calendar and used for reminders. You can also add a calendar manually or remove the
 selected row.
@@ -58,7 +59,7 @@ After changing the calendar list, click **Save locally**, then **Apply to agent*
 
 The **Reminders** section controls toast notifications and the background synchronization cadence.
 
-![Reminder settings](assets/user-guide/reminders.png)
+![Reminder settings](assets/user-guide/en/reminders.png)
 
 The default reminder lead time is used for the first notification before an event starts. The final reminder lead time
 sets a shorter follow-up warning. The sync interval controls how often the agent refreshes upcoming events.
@@ -67,7 +68,7 @@ sets a shorter follow-up warning. The sync interval controls how often the agent
 
 Use **Events** for manual synchronization checks.
 
-![Upcoming events](assets/user-guide/events.png)
+![Upcoming events](assets/user-guide/en/events.png)
 
 Available actions:
 
@@ -82,6 +83,8 @@ During long-running actions, the window is temporarily disabled and the system b
 
 The **Status** section manages the current user's background agent:
 
+![Agent status](assets/user-guide/en/status.png)
+
 - **Install agent** registers startup and immediately tries to start the agent.
 - **Start agent** starts the agent manually for the current session.
 - **Uninstall agent** removes the startup registration.
@@ -93,7 +96,7 @@ start troubleshooting from this section.
 
 Use **Settings** to choose the UI language and theme.
 
-![Appearance settings](assets/user-guide/settings.png)
+![Appearance settings](assets/user-guide/en/settings.png)
 
 Language changes apply after restarting the app. The theme can follow the Windows system setting or be fixed to light or
 dark mode.
