@@ -52,6 +52,9 @@ matching `.cer` into `Cert:\LocalMachine\Root` from an elevated PowerShell sessi
 
 - [User manual](docs/user_manual.md)
 - [Screenshot user guide](docs/user_guide.md)
+- [Руководство пользователя](docs/user_guide_ru.md)
+- [Privacy policy](docs/privacy_policy.md)
+- [Microsoft Store submission checklist](docs/microsoft_store_submission.md)
 - [Windows Calendar bridge notes](docs/windows_calendar_bridge.md)
 - [Project specification](docs/project_specification.md)
 

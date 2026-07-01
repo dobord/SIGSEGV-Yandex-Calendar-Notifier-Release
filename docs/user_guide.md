@@ -1,20 +1,21 @@
-# Руководство пользователя
+# User Guide
 
-SIGSEGV Yandex Calendar Notifier помогает держать события из Yandex Calendar рядом с системным календарем Windows.
-Приложение синхронизирует выбранные CalDAV-календари, публикует ближайшие события в Windows Calendar и показывает
-toast-напоминания от имени текущего пользователя Windows.
+SIGSEGV Yandex Calendar Notifier keeps selected Yandex Calendar events close to the Windows calendar experience. The
+app synchronizes selected CalDAV calendars, publishes upcoming events into the signed-in user's Windows Calendar, and
+shows Windows toast reminders for the current Windows user.
 
-Скриншоты ниже подготовлены для документации: email, URL, имена календарей и названия событий замылены.
+The screenshots below are documentation-safe copies: email addresses, URLs, calendar names, and event titles are
+blurred.
 
-## Установка
+## Installation
 
-Скачайте из релиза два файла одного и того же номера версии:
+Download both files from the same release version:
 
-- `SIGSEGVYandexCalendarNotifier-<version>.0-x64.msix` - приложение и фоновый агент.
-- `SIGSEGVYandexCalendarNotifier-<version>.0-x64.cer` - сертификат подписи MSIX.
+- `SIGSEGVYandexCalendarNotifier-<version>.0-x64.msix` - the app and the background agent.
+- `SIGSEGVYandexCalendarNotifier-<version>.0-x64.cer` - the MSIX signing certificate.
 
-Если релиз подписан self-signed сертификатом, импортируйте `.cer` в доверенные корневые сертификаты из PowerShell,
-запущенного от администратора:
+If the release is signed with a self-signed certificate, import the `.cer` file into the trusted root certificate store
+from an elevated PowerShell session:
 
 ```powershell
 Import-Certificate `
@@ -22,98 +23,98 @@ Import-Certificate `
   -CertStoreLocation Cert:\LocalMachine\Root
 ```
 
-После этого установите MSIX для текущего пользователя:
+Then install the MSIX for the current Windows user:
 
 ```powershell
 Add-AppxPackage -Path .\SIGSEGVYandexCalendarNotifier-<version>.0-x64.msix
 ```
 
-## Аккаунт
+## Account
 
-Откройте `SIGSEGV Yandex Calendar Notifier` и заполните раздел **Аккаунт**.
+Open `SIGSEGV Yandex Calendar Notifier` and fill in the **Account** section.
 
 ![Account settings](assets/user-guide/account.png)
 
-Укажите базовый CalDAV URL Yandex, email аккаунта и пароль приложения Yandex. Пароль хранится локально через Windows
-DPAPI и привязан к текущему пользователю Windows.
+Enter the Yandex CalDAV base URL, the Yandex account email, and the Yandex app password. The app password is stored
+locally through Windows DPAPI and is tied to the current Windows user.
 
-Кнопки в разделе:
+Account actions:
 
-- **Сохранить локально** записывает конфигурацию в профиль пользователя.
-- **Применить к агенту** отправляет текущую конфигурацию уже запущенному фоновому агенту.
-- **Получить от агента** читает конфигурацию из фонового агента и обновляет поля формы.
+- **Save locally** writes the configuration into the user's local profile.
+- **Apply to agent** sends the current configuration to the already running background agent.
+- **Get from agent** reads the configuration from the background agent and refreshes the form.
 
-## Календари
+## Calendars
 
-В разделе **Календари** выберите коллекции CalDAV, которые должны синхронизироваться.
+Use **Calendars** to choose the CalDAV collections that should be synchronized.
 
-Нажмите **Найти календари**, чтобы получить список коллекций из Yandex. Оставьте галочки только у тех календарей,
-события которых должны попадать в Windows Calendar и напоминания. При необходимости можно вручную добавить календарь
-или удалить выбранную строку.
+Click **Discover calendars** to fetch the collection list from Yandex. Keep enabled only the calendars whose events
+should be published into Windows Calendar and used for reminders. You can also add a calendar manually or remove the
+selected row.
 
-После изменения списка календарей нажмите **Сохранить локально**, затем **Применить к агенту**.
+After changing the calendar list, click **Save locally**, then **Apply to agent**.
 
-## Напоминания
+## Reminders
 
-Раздел **Напоминания** управляет toast-уведомлениями и частотой фоновой синхронизации.
+The **Reminders** section controls toast notifications and the background synchronization cadence.
 
 ![Reminder settings](assets/user-guide/reminders.png)
 
-Основное время напоминания используется для первого уведомления до начала события. Финальное время напоминания задает
-повторное короткое предупреждение. Интервал синхронизации определяет, как часто агент обновляет ближайшие события.
+The default reminder lead time is used for the first notification before an event starts. The final reminder lead time
+sets a shorter follow-up warning. The sync interval controls how often the agent refreshes upcoming events.
 
-## События
+## Events
 
-Раздел **События** нужен для ручной проверки синхронизации.
+Use **Events** for manual synchronization checks.
 
 ![Upcoming events](assets/user-guide/events.png)
 
-Доступные действия:
+Available actions:
 
-- **Загрузить события** показывает ближайшие события из агента за выбранный горизонт.
-- **Синхронизировать** запускает синхронизацию CalDAV без публикации в Windows Calendar.
-- **Синхр. + опубликовать** синхронизирует Yandex Calendar и публикует события в Windows Calendar.
-- **Проверить Windows Calendar** запускает диагностику доступа к системному календарю Windows.
+- **Load events** shows upcoming events reported by the agent for the selected time horizon.
+- **Sync now** starts a CalDAV synchronization without publishing to Windows Calendar.
+- **Sync + publish** synchronizes Yandex Calendar and publishes events into Windows Calendar.
+- **Verify Windows Calendar** runs diagnostics for the Windows Calendar integration.
 
-Во время долгих действий окно временно блокируется, а у курсора появляется системный индикатор загрузки.
+During long-running actions, the window is temporarily disabled and the system busy cursor is shown.
 
-## Статус
+## Status
 
-Раздел **Статус** управляет фоновым агентом текущего пользователя:
+The **Status** section manages the current user's background agent:
 
-- **Установить агент** регистрирует автозапуск и сразу пытается запустить агент.
-- **Запустить агент** стартует агент вручную для текущей сессии.
-- **Удалить агент** снимает регистрацию автозапуска.
+- **Install agent** registers startup and immediately tries to start the agent.
+- **Start agent** starts the agent manually for the current session.
+- **Uninstall agent** removes the startup registration.
 
-Журнал активности показывает последние операции, ответы агента и диагностические сообщения. Если синхронизация не
-работает, сначала проверьте именно этот раздел.
+The activity log shows recent operations, agent responses, and diagnostic messages. If synchronization does not work,
+start troubleshooting from this section.
 
-## Настройки
+## Settings
 
-В разделе **Настройки** можно выбрать язык интерфейса и тему.
+Use **Settings** to choose the UI language and theme.
 
 ![Appearance settings](assets/user-guide/settings.png)
 
-Изменение языка применяется после перезапуска приложения. Тема может следовать системной настройке Windows или быть
-зафиксирована в светлом/темном режиме.
+Language changes apply after restarting the app. The theme can follow the Windows system setting or be fixed to light or
+dark mode.
 
-## Где хранится конфигурация
+## Configuration Storage
 
-Конфигурация хранится для каждого пользователя Windows отдельно:
+Configuration is stored separately for each Windows user:
 
 ```text
 %LOCALAPPDATA%\SIGSEGVYandexCalendarNotifier\config.json
 ```
 
-Пароль приложения не хранится открытым текстом: приложение записывает DPAPI-защищенное поле `app_password_dpapi`.
-Такой файл нельзя безопасно перенести в другой Windows-аккаунт.
+The app password is not stored as plain text. The app writes the DPAPI-protected `app_password_dpapi` field instead.
+That protected value cannot be safely moved to another Windows account.
 
-## Частые проблемы
+## Common Issues
 
-Если App Installer показывает `0x800B0109` или `0x800B010A`, Windows не доверяет сертификату подписи. Импортируйте
-`.cer` из того же релиза в `Cert:\LocalMachine\Root` и повторите установку MSIX.
+If App Installer shows `0x800B0109` or `0x800B010A`, Windows does not trust the signing certificate. Import the `.cer`
+from the same release into `Cert:\LocalMachine\Root`, then retry the MSIX installation.
 
-Если приложение сообщает о несовпадении версий bridge и GUI, переустановите `.msix` и `.cer` из одного релиза.
+If the app reports a bridge/GUI version mismatch, reinstall the `.msix` and `.cer` from the same release.
 
-Если события не появляются в Windows Calendar, откройте **События** и выполните **Синхр. + опубликовать**, затем
-**Проверить Windows Calendar**. Подробности будут в разделе **Статус**.
+If events do not appear in Windows Calendar, open **Events** and run **Sync + publish**, then **Verify Windows
+Calendar**. Details will be shown in **Status**.

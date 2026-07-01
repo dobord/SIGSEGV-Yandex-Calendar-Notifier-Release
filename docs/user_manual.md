@@ -59,7 +59,8 @@ The encrypted value cannot be moved to a different Windows account.
 
 ## User Guide
 
-For a screenshot-based walkthrough, see [User guide](user_guide.md).
+For a screenshot-based walkthrough, see [User guide](user_guide.md). A Russian version is available as
+[Руководство пользователя](user_guide_ru.md).
 
 Use the Calendars tab to refresh calendar names and choose which calendars should be synchronized. Some Yandex CalDAV
 accounts do not return a complete calendar-home collection; if calendars are already present in the configuration, the
