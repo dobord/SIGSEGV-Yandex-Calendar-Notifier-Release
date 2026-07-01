@@ -127,8 +127,8 @@ Install the package:
 
 ```powershell
 .\scripts\install-msix-bridge.ps1 `
-  -PackagePath artifacts\packages\SIGSEGVYandexCalendarNotifier-0.6.8.0-x64.msix `
-  -CertificatePath artifacts\packages\SIGSEGVYandexCalendarNotifier-0.6.8.0-x64.cer `
+  -PackagePath artifacts\packages\SIGSEGVYandexCalendarNotifier-0.6.9.0-x64.msix `
+  -CertificatePath artifacts\packages\SIGSEGVYandexCalendarNotifier-0.6.9.0-x64.cer `
   -TrustCertificateLocalMachine `
   -LaunchProbe
 ```
