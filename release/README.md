@@ -13,6 +13,6 @@ Mirrored from [dobord/SIGSEGV-Yandex-Calendar-Notifier](https://github.com/dobor
 
 ## Documentation
 
-- [User manual](../../docs/user_manual.md)
-- [Windows Calendar bridge notes](../../docs/windows_calendar_bridge.md)
-- [Project specification](../../docs/project_specification.md)
+- [User manual](../docs/user_manual.md)
+- [Windows Calendar bridge notes](../docs/windows_calendar_bridge.md)
+- [Project specification](../docs/project_specification.md)

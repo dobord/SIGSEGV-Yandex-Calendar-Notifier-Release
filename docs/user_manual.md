@@ -12,8 +12,8 @@ The product has two installed parts:
 
 ## Release Files
 
-Download all files from the same release tag. Mixing MSI and MSIX versions can leave the configuration app talking to an
-older packaged bridge.
+Download all files from the same release package set. Mixing MSI and MSIX versions can leave the configuration app
+talking to an older packaged bridge.
 
 - `SIGSEGVYandexCalendarNotifier-<version>-Windows-AMD64.msi`: Windows installer for the configuration app.
 - `SIGSEGVYandexCalendarNotifier-<version>-Windows-AMD64.zip`: portable archive for the configuration app.
