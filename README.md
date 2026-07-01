@@ -60,8 +60,8 @@ matching `.cer` into `Cert:\LocalMachine\Root` from an elevated PowerShell sessi
 
 ## Publishing Model
 
-This repository intentionally does not use GitHub Releases or tags. GitHub automatically exposes source archives for
-tagged releases, while this repository is meant to contain only documentation and the installable package files.
+This repository publishes GitHub Releases and tags that match the source repository release tags. Release assets uploaded
+by automation are limited to the installable package files: `.msi`, `.zip`, `.msix`, and `.cer`.
 
 ## Source
 

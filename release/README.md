@@ -1,8 +1,8 @@
-# v0.6.7
+﻿# v0.6.7
 
 Version: 0.6.7
 
-Mirrored from [dobord/SIGSEGV-Yandex-Calendar-Notifier](https://github.com/dobord/SIGSEGV-Yandex-Calendar-Notifier) commit `4cd138dd2f467b89b6120252a1d3669b4ecfdbff`.
+Mirrored from [dobord/SIGSEGV-Yandex-Calendar-Notifier](https://github.com/dobord/SIGSEGV-Yandex-Calendar-Notifier) commit `4cd138dc68541ecab60154158af64115b06b6018`.
 
 ## Files
 
