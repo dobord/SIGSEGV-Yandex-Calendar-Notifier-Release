@@ -125,8 +125,8 @@ Install the package:
 
 ```powershell
 .\scripts\install-msix-bridge.ps1 `
-  -PackagePath artifacts\packages\SIGSEGVYandexCalendarBridge-0.6.4.0-x64.msix `
-  -CertificatePath artifacts\packages\SIGSEGVYandexCalendarBridge-0.6.4.0-x64.cer `
+  -PackagePath artifacts\packages\SIGSEGVYandexCalendarBridge-0.6.5.0-x64.msix `
+  -CertificatePath artifacts\packages\SIGSEGVYandexCalendarBridge-0.6.5.0-x64.cer `
   -TrustCertificateLocalMachine `
   -LaunchProbe
 ```

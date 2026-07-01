@@ -1,5 +1,7 @@
 # SIGSEGV Yandex Calendar Notifier Releases
 
+![SIGSEGV Yandex Calendar Notifier icon](assets/icon.png)
+
 This public repository is updated automatically from
 [`dobord/SIGSEGV-Yandex-Calendar-Notifier`](https://github.com/dobord/SIGSEGV-Yandex-Calendar-Notifier).
 It contains user-facing documentation and the latest published Windows release package set.
@@ -55,7 +57,6 @@ matching `.cer` into `Cert:\LocalMachine\Root` from an elevated PowerShell sessi
 - [User manual](docs/user_manual.md)
 - [Windows Calendar bridge notes](docs/windows_calendar_bridge.md)
 - [Project specification](docs/project_specification.md)
-- [Changelog](CHANGELOG.md)
 
 ## Publishing Model
 
